@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+:root {
+  --primary-orange: hsl(31, 77%, 52%);
+  --primary-cyan: hsl(184, 100%, 22%);
+  --primary-dark-cyan: hsl(179, 100%, 13%);
+
+  --txt-primary: hsl(0, 0%, 95%);
+  --txt-para: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: var(--txt-primary);
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--txt-primary);
+}
+
+p {
+  color: var(--txt-para);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    width: 1000px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  height: 100%;
+}
+
+.card:nth-child(1) {
+  background-color: var(--primary-orange);
+  border-radius: 8px 0 0 8px;
+}
+
+.card:nth-child(1) .btn {
+  background-color: var(--txt-primary);
+  border: none;
+  color: var(--primary-orange);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card:nth-child(2) {
+  background-color: var(--primary-cyan);
+}
+
+.card:nth-child(2) .btn {
+  background-color: var(--txt-primary);
+  border: none;
+  color: var(--primary-cyan);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card:nth-child(3) {
+  background-color: var(--primary-dark-cyan);
+  border-radius: 0 8px 8px 0;
+}
+
+.card:nth-child(3) .btn {
+  background-color: var(--txt-primary);
+  border: none;
+  color: var(--primary-dark-cyan);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
